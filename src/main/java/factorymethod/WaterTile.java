@@ -8,6 +8,6 @@ public class WaterTile implements Tile{
 
     @Override
     public String getType() {
-        return "water";
+        return "water ";
     }
 }
