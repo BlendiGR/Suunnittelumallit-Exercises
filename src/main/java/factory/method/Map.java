@@ -1,4 +1,4 @@
-package factorymethod;
+package factory.method;
 
 public abstract class Map {
 

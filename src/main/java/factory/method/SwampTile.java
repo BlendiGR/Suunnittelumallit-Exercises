@@ -1,13 +1,13 @@
-package factorymethod;
+package factory.method;
 
-public class RoadTile implements Tile{
+public class SwampTile implements Tile{
     @Override
     public String getCharacter() {
-        return "R";
+        return "S";
     }
 
     @Override
     public String getType() {
-        return "road";
+        return "swamp";
     }
 }

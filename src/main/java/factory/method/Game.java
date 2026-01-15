@@ -1,4 +1,4 @@
-package factorymethod;
+package factory.method;
 
 public class Game {
     public static void main(String args[]) {

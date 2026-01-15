@@ -1,4 +1,4 @@
-package factorymethod;
+package factory.method;
 
 public interface Tile {
     String getCharacter();

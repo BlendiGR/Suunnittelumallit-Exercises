@@ -1,4 +1,4 @@
-package factorymethod;
+package factory.method;
 
 public class CityMap extends Map {
     @Override
