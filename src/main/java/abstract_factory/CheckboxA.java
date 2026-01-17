@@ -12,4 +12,9 @@ public class CheckboxA implements Checkbox {
         String checkbox = "[X] %s".formatted(text);
         System.out.println(checkbox);
     }
+
+    @Override
+    public void setText(String text) {
+        this.text = text;
+    }
 }

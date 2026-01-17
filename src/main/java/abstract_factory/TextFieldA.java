@@ -13,4 +13,9 @@ public class TextFieldA implements TextField{
         String textField = "| %-15s |".formatted(text);
         System.out.println(text);
     }
+
+    @Override
+    public void setText(String text) {
+        this.text = text;
+    }
 }

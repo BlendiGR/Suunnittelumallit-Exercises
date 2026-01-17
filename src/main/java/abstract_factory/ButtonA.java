@@ -13,4 +13,9 @@ public class ButtonA implements Button{
         String button = "[ %s ]".formatted(text);
         System.out.println(button);
     }
+
+    @Override
+    public void setText(String text) {
+        this.text = text;
+    }
 }

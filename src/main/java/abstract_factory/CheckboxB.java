@@ -14,4 +14,9 @@ public class CheckboxB implements Checkbox {
         System.out.println(checkbox);
     }
 
+    @Override
+    public void setText(String text) {
+        this.text = text;
+    }
+
 }

@@ -17,4 +17,9 @@ public class TextFieldB implements TextField {
         System.out.println(textfield);
     }
 
+    @Override
+    public void setText(String text) {
+        this.text = text;
+    }
+
 }

@@ -17,4 +17,9 @@ public class ButtonB implements Button{
         System.out.println(button);
     }
 
+    @Override
+    public void setText(String text) {
+        this.text = text;
+    }
+
 }
