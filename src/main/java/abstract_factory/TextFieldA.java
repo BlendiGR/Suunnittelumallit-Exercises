@@ -8,6 +8,6 @@ public class TextFieldA extends TextField{
     @Override
     public void display() {
         String textField = "| %-15s |".formatted(text);
-        System.out.println(text);
+        System.out.println(textField);
     }
 }
