@@ -1,9 +1,6 @@
 package abstract_factory;
 
-public class CheckboxB implements Checkbox {
-
-    String text;
-
+public class CheckboxB extends Checkbox {
     public CheckboxB(String text) {
         this.text = text;
     }
@@ -12,11 +9,6 @@ public class CheckboxB implements Checkbox {
     public void display() {
         String checkbox = "☒ %s".formatted(text);
         System.out.println(checkbox);
-    }
-
-    @Override
-    public void setText(String text) {
-        this.text = text;
     }
 
 }

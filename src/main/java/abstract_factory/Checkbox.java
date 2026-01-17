@@ -1,6 +1,11 @@
 package abstract_factory;
 
-public interface Checkbox {
-    void display();
-    void setText(String text);
+public abstract class Checkbox {
+    protected String text;
+
+    abstract void display();
+
+    void setText(String text){
+        this.text = text;
+    };
 }

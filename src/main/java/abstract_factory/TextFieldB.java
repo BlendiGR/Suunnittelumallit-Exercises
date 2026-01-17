@@ -1,9 +1,6 @@
 package abstract_factory;
 
-public class TextFieldB implements TextField {
-
-    String text;
-
+public class TextFieldB extends TextField {
     public TextFieldB(String text) {
         this.text = text;
     }
@@ -16,10 +13,4 @@ public class TextFieldB implements TextField {
                 ╰─────────────────╯""".formatted(text);
         System.out.println(textfield);
     }
-
-    @Override
-    public void setText(String text) {
-        this.text = text;
-    }
-
 }

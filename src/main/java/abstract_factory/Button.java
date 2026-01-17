@@ -1,6 +1,11 @@
 package abstract_factory;
 
-public interface Button {
-    void display();
-    void setText(String text);
+public abstract class Button {
+    protected String text;
+
+    abstract void display();
+
+    void setText(String text){
+        this.text = text;
+    };
 }

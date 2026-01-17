@@ -1,9 +1,6 @@
 package abstract_factory;
 
-public class ButtonB implements Button{
-
-    String text;
-
+public class ButtonB extends Button{
     public ButtonB(String text) {
         this.text = text;
     }
@@ -16,10 +13,4 @@ public class ButtonB implements Button{
                 └──────────┘""".formatted(text);
         System.out.println(button);
     }
-
-    @Override
-    public void setText(String text) {
-        this.text = text;
-    }
-
 }
