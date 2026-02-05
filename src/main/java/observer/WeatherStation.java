@@ -1,13 +1,13 @@
 package observer;
 
-public class WeatherStation extends Observable implements Runnable {
+public class WeatherStation extends Observable {
 
     private String name;
     private double temp;
 
-    public WeatherStation(String name, double initTemp) {
+    public WeatherStation(String name) {
         this.name = name;
-        this.temp = initTemp;
+        this.temp = -40 + (Math.random() * 80);
     }
 
 
@@ -30,7 +30,7 @@ public class WeatherStation extends Observable implements Runnable {
                     temp--;
                     notifySubscribers();
                 }
-                Thread.sleep(100);
+                Thread.sleep(1000 + (int)(Math.random() * 4000));
             } catch (InterruptedException error) {
                 Thread.currentThread().interrupt();
                 return;

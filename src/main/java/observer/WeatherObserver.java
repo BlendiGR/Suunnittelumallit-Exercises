@@ -2,7 +2,7 @@ package observer;
 
 public class WeatherObserver implements Observer {
 
-    String name;
+    private String name;
 
     public WeatherObserver (String name) {
         this.name = name;
@@ -10,6 +10,10 @@ public class WeatherObserver implements Observer {
 
     @Override
     public void update(double value) {
-        System.out.println(name + ": " + value);
+        System.out.println("OBSERVER : " + name + ": <" + value + ">");
+    }
+
+    public String getName() {
+        return this.name;
     }
 }

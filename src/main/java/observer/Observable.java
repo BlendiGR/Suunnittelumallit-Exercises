@@ -6,7 +6,7 @@ import java.util.Set;
 
 public abstract class Observable implements Runnable {
 
-    Set<Observer> observers = new HashSet<>();
+    protected Set<Observer> observers = new HashSet<>();
 
     public abstract void notifySubscribers();
 
