@@ -7,9 +7,9 @@ public class EncryptedPrinter extends PrinterDecorator {
     private static final String ALGO = "AES";
     private static String key;
 
-    public EncryptedPrinter(Printer printer, String key) {
+    public EncryptedPrinter(Printer printer) {
         super(printer);
-        this.key = key;
+        this.key = "Default123456789";
     }
 
     // Löysin nämä netistä nämä simppelit encyptionit.
@@ -42,7 +42,7 @@ public class EncryptedPrinter extends PrinterDecorator {
     }
 
     @Override
-    public void print(String message) {
+    public void print(String message) throws Exception {
         super.print(encrypt(message));
     }
 }

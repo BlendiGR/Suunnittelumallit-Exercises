@@ -7,7 +7,7 @@ public class XMLPrinter extends PrinterDecorator {
     }
 
     @Override
-    public void print(String message){
+    public void print(String message) throws Exception {
         super.print("<message>" + message + "</message>");
     }
 }

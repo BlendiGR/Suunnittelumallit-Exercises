@@ -9,7 +9,7 @@ public class PrinterDecorator implements Printer {
     }
 
     @Override
-    public void print(String message) {
+    public void print(String message) throws Exception {
         try {
             printer.print(message);
         } catch (Exception e) {

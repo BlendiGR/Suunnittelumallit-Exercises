@@ -9,10 +9,10 @@ public class Main {
 
         printer.print("hey");
 
-        printer = new EncryptedPrinter(new BasicPrinter(), "1234567891011121");
+        printer = new EncryptedPrinter(new BasicPrinter());
         printer.print("MOI");
 
-        printer = new EncryptedPrinter(new XMLPrinter(new BasicPrinter()), "1234567812345678");
+        printer = new EncryptedPrinter(new XMLPrinter(new BasicPrinter()));
         printer.print("MOI MOI MOI MOI MOI MOI");
 
     }
