@@ -39,22 +39,19 @@ public class ExpertState implements State {
 
     @Override
     public void action() {
+        System.out.println("\nLevel: Expert  XP: " + character.getExperiencePoints() + "  Health: " + character.getHealthPoints());
         String[] options = {"[1] Train", "[2] Meditate", "[3] Fight"};
-        while (character.getExperiencePoints() < 30) {
-            System.out.println("\nLevel: " + character.getLevel() + "  XP: " + character.getExperiencePoints() + "  Health: " + character.getHealthPoints() + "!");
-            switch (character.readUserChoice(options)){
-                case 1:
-                    train();
-                    break;
-                case 2:
-                    meditate();
-                    break;
-                case 3:
-                    fight();
-                    break;
-            }
+
+        int choice = character.readUserChoice(options);
+        switch (choice) {
+            case 1 -> train();
+            case 2 -> meditate();
+            case 3 -> fight();
         }
-        System.out.println("You have reached the maximum level! Game ending....");
-        character.setGameRunning(false);
+
+        if (character.getExperiencePoints() >= 30) {
+            character.setLevel(4);
+            character.setState(new MasterState(character));
+        }
     }
 }

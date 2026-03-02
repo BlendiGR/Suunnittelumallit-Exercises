@@ -28,7 +28,9 @@ public class MasterState implements State {
 
     @Override
     public void action() {
-
+        System.out.println("\nLevel: Master  XP: " + character.getExperiencePoints() + "  Health: " + character.getHealthPoints());
+        System.out.println("You have reached the maximum level. The game ends here.....");
+        character.setGameRunning(false);
     }
 }
 

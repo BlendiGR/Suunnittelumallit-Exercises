@@ -28,13 +28,17 @@ public class NoviceState implements State {
 
     @Override
     public void action() {
+        System.out.println("\nLevel: Novice  XP: " + character.getExperiencePoints() + "  Health: " + character.getHealthPoints());
         String[] options = {"[1] Train"};
-        while (character.getExperiencePoints() < 10) {
-            System.out.println("\nLevel: " + character.getLevel() + "  XP: " + character.getExperiencePoints() + "  Health: " + character.getHealthPoints() + "!");
-            if (character.readUserChoice(options) == 1) {
-                train();
-            }
+
+        if (character.readUserChoice(options) == 1) {
+            train();
         }
-        character.setLevel(2);
-        character.setState(new IntermediateState(character));
-}}
+
+        if (character.getExperiencePoints() >= 10) {
+            System.out.println("Congratulations! You've reached Intermediate level.");
+            character.setLevel(2);
+            character.setState(new IntermediateState(character));
+        }
+    }
+}

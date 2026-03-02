@@ -31,19 +31,20 @@ public class IntermediateState implements State {
 
     @Override
     public void action() {
+        System.out.println("\nLevel: Intermediate  XP: " + character.getExperiencePoints() + "  Health: " + character.getHealthPoints());
         String[] options = {"[1] Train", "[2] Meditate"};
-        while (character.getExperiencePoints() < 20) {
-            System.out.println("\nLevel: " + character.getLevel() + "  XP: " + character.getExperiencePoints() + "  Health: " + character.getHealthPoints() + "!");
-            switch (character.readUserChoice(options)){
-                case 1:
-                    train();
-                    break;
-                case 2:
-                    meditate();
-                    break;
-            }
+
+        int choice = character.readUserChoice(options);
+        if (choice == 1) {
+            train();
+        } else if (choice == 2) {
+            meditate();
         }
-        character.setLevel(3);
-        character.setState(new ExpertState(character));
+
+        if (character.getExperiencePoints() >= 20) {
+            System.out.println("Congratulations! You've reached Expert level.");
+            character.setLevel(3);
+            character.setState(new ExpertState(character));
+        }
     }
 }
