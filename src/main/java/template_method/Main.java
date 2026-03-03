@@ -2,8 +2,8 @@ package template_method;
 
 public class Main {
     public static void main(String[] args) {
-        RussianRoulette jack = new RussianRoulette();
+        RussianRoulette roulette = new RussianRoulette();
 
-        jack.play(4);
+        roulette.play(4);
     }
 }
